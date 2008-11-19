@@ -9,16 +9,6 @@
  * @author Kléderson Bueno <klederson@klederson.com>
  */
 
-$teste = new CorreiosPostal();
-
-$teste->from = "01302010";
-$teste->to = "13015315";
-$teste->weight = 1;
-
-$postalInfo[] = $teste->getTaxes();
-
-print "<pre>";
-print_r($postalInfo);
 
 class CorreiosPostal {
 	
