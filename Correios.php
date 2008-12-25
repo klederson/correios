@@ -8,15 +8,13 @@
  * @package webinsys.utils.brazil.correios
  * @author Kléderson Bueno <klederson@klederson.com>
  */
-
-
 class CorreiosPostal {
 	
 	const FRETE_PAC = 41106; //Normal shipping arround 7 to 18 days to delivery - Avaliable for all cities
 	const FRETE_SEDEX = 40010; //Medium shipping arround 2-5 days - Avaliable for all cities
 	const FRETE_SEDEX_10 = 40215; //Medium-Fast shipping arround 24 hours - Avalliable for most of big cities
 	const FRETE_SEDEX_HOJE = 40290;//Faster shipping, delivered the same day - Have lots of limitations see www.correios.com.br for more information
-	const FRETE_E_SEDEX = 81019;
+	const FRETE_E_SEDEX = 81019;//This is only for contracts
 	const FRETE_MALOTE = 44105;
 
 	static $from, $to, $weight, $ensuranceValue;
