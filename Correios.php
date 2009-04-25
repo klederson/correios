@@ -14,7 +14,7 @@ class CorreiosPostal {
 	const FRETE_SEDEX = 40010; //Medium shipping arround 2-5 days - Avaliable for all cities
 	const FRETE_SEDEX_10 = 40215; //Medium-Fast shipping arround 24 hours - Avalliable for most of big cities
 	const FRETE_SEDEX_HOJE = 40290;//Faster shipping, delivered the same day - Have lots of limitations see www.correios.com.br for more information
-	const FRETE_E_SEDEX = 81019;//This is only for contracts
+	const FRETE_E_SEDEX = 81019; //This is only for contracts
 	const FRETE_MALOTE = 44105;
 
 	static $from, $to, $weight, $ensuranceValue;
@@ -75,7 +75,7 @@ class CorreiosPostal {
 	private function parseResponse(array $correios) {
 		//It serializes the array to a query string
 		$serializedCorreios = http_build_query($correios);
-		$xmlFile = utf8_encode(html_entity_decode(file_get_contents(self::$postalUrl . "?" . $serializedCorreios)));
+		$xmlFile = trim(utf8_encode(html_entity_decode(file_get_contents(self::$postalUrl . "?" . $serializedCorreios))));
 
 		$content = new DOMDocument;
 		$content->loadXML($xmlFile); //domxml_open_file($postalUrl . $serializedCorreios);

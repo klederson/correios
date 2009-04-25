@@ -14,7 +14,7 @@ require_once("Rastreio.php");
 
 $tracking = new CorreiosTracking();
 
-$myItem = $tracking->trackItem('SS987654321BR');
+$myItem = $tracking->trackItem('S0456586463BR');
 
 print "<pre>";
 print_r($myItem);
